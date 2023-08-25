@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+body {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: larger;
+  text-align: center;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/2071/2071353.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+footer {
+  font-family: 'Nanum Pen Script', cursive;
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(250, 235, 215, 0.568);
+}
+h1 {
+  color : #333;
+}
+input[type="text"]{
+  padding: 10px;
+  width:  60%;
+  border:2px solid;
+  border-color: #ffb108;
+}
+.search {
+  margin: 20px;
+}
+
+/* 추가, 초기화 버튼 */
+#addTask, #removeTask {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: large;
+  margin: 10px;
+  padding: 10px 30px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 20%;
+  transition: transform 0.5s ease;
+}
+button:hover { 
+  transform: scale(1.2);
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#taskList li {
+  width: 500px auto;
+  margin: 10px;
+  padding: 5px;
+  background-color: #bbe0f18f ;
+  transition: transform 0.5s ease;
+}
+li.completed {
+  text-decoration: line-through;
+}
+li:hover{
+  transform: scale(1.05);
+}
+#delete, #complete {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: large;
+  padding: 4px 8px;
+  margin: 2px;
+  border: none;
+  background-color: #333333d2;
+  color: white;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.menu {
+  right: auto;
+  top: auto;
+  display: none;
+  position: absolute;
+}
+li.active .menu {
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+    /* 입력 필드의 너비를 100%로 조정하여 화면 크기에 맞춤 */
+  }
+
+  ul {
+    left: 0;
+    /* 목록을 화면 왼쪽으로 이동하여 가운데 정렬 적용 해제 */
+  }
+}
